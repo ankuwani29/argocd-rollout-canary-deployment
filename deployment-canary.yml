@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: kubeserve-canary
 spec:
-  replicas: 2
+  replicas: 4
 
   selector:
     matchLabels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: c1
-        image: leaddevops/kubeserve:v2
+        image: leaddevops/kubeserve:v3
         ports:
         - containerPort: 80
 
